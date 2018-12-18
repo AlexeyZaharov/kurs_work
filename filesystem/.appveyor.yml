@@ -2,6 +2,10 @@ branches:
   only:
     - master
 
+environment:
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Qt Creator 4.7.2
+
 install:
   - set QTDIR=C:\Qt\5.8\mingw53_32
   - choco install -y InnoSetup
