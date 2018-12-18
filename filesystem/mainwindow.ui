@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="9" column="0">
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>15</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Панель вывода</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="text">
+       <string>cancel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="9">
+     <widget class="QListView" name="listView"/>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="text">
+       <string>Scan by VT</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="source.qrc">:/imgs/[.bmp</pixmap>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>registr</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>exit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>scan</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="text">
+       <string>clean panel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>652</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Take Report</string>
+    </property>
+    <addaction name="action_4"/>
+   </widget>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="action_4">
+   <property name="text">
+    <string>Get it</string>
+   </property>
+  </action>
+  <action name="actiongus">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/imgs/uecm.jpg</normaloff>:/imgs/uecm.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>gus</string>
+   </property>
+  </action>
+  <action name="actionQoute">
+   <property name="text">
+    <string>Quote</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>647</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

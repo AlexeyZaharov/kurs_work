@@ -1,0 +1,7 @@
+﻿  Generate moc_predefs.h
+  Moc'ing mainwindow.h...
+  Uic'ing mainwindow.ui...
+  main.cpp
+  mainwindow.cpp
+  moc_mainwindow.cpp
+  filesystem.vcxproj -> C:\Users\HP\Documents\filesystem\debug\filesystem.exe
