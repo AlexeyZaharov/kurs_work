@@ -9,15 +9,9 @@ install:
   
 build: off
 
-build_script:
+Script:
   - qmake filesystem.pro
   - mingw32-make
-after_build:
-  - windeployqt release/filesystem.exe
-  - cmd: cp LICENSE release/LICENSE.txt"
-  - iscc innosetup.iss
-  - rm release/*.o
-  - rm release/*.cpp
 
 artifacts:
   - path: Output\filesystem-*.exe
