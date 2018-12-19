@@ -13,7 +13,7 @@ install:
   
 build: false
   
-build_script:
+test_script:
   - qmake filesystem.pro
   - mingw32-make
 
