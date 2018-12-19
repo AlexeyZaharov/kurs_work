@@ -11,9 +11,7 @@ install:
   - choco install -y InnoSetup
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin;%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 
-
-before_build:
-  - build: false
+build: false
 
 build_script:
   - qmake filesystem.pro
