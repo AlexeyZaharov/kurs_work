@@ -74,8 +74,15 @@ void MainWindow::finish_scanning_registry()
     if(scaner.counter_()==0)
         QMessageBox::information(this,"Notification","All right in registr");
     else {
-        QMessageBox::information(this,"Notification","Dangerous files were moved to carantin");
-        QMessageBox::information(this,"Notification","Moved " + QString::number(scaner.counter_()) + " files");
+        QString str = "Dangerous files were found\nPlease, delete these values from your registr:\n";
+
+        for (auto & i : scaner.valuesAndKeys) {
+            str += i + '\n';
+        }
+
+        QMessageBox::information(this,"Notification", str);
+        system("regedit");
+        //QMessageBox::information(this,"Notification","Moved " + QString::number(scaner.counter_()) + " files");
     }
 }
 
