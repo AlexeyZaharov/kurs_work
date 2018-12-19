@@ -17,6 +17,12 @@ build_script:
   - qmake filesystem.pro
   - mingw32-make
 
+test_script:
+- cmd: cd Test
+- cmd: nuget install Appveyor.TestLogger -Version 2.0.0
+- cmd: cd ..
+- cmd: dotnet test --no-build --no-restore --test-adapter-path:. --logger:Appveyor Test
+
 artifacts:
   - path: Output\filesystem-*.exe
   - path: release
