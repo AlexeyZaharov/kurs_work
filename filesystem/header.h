@@ -178,12 +178,14 @@ private:
                 std::wstring stemp2 = to_LPCWSTR(i.second);
                 LPCWSTR str1 = stemp1.c_str();
                 LPCWSTR str2 = stemp2.c_str();
+                valuesAndKeys.push_back(QString::fromUtf16((const ushort*)str2));
+                ++counter;
 
-                RegDeleteValue(hKey, str1);
-                RegDeleteKey(hKey, str2);
-                emit send_for_writing("This record has been deleted \n");
+                //RegDeleteValue(hKey, str1);
+                //RegDeleteKey(hKey, str2);
+                //emit send_for_writing("This record has been deleted \n");
 
-                move_file(path(i.second).generic_string(), path(i.second).filename().generic_string());
+                //move_file(path(i.second).generic_string(), path(i.second).filename().generic_string());
             }
         }
 
@@ -194,6 +196,7 @@ public:
     ilogger *logger;
     QString name_of_scan;
     bool directory;
+    std::vector<QString> valuesAndKeys;
 
     void move_file(std::string filname, std::string name) {
         ++counter;
